@@ -1,26 +1,36 @@
-.post__button {
+.content__button {
     background: $white;
     color: $smoky-black;
-    border-radius: 50px;
+    border-radius: 0;
+    border: 2px solid $smoky-black;
     padding:0.75rem 1rem;
+    font-family: $raleway;
+    font-size: $font-size-x-large;
+    font-weight: $font-bold;
 
-    &--small {
-        margin-right: 0.75rem;
+
+    &-container {
+       padding-left: 40px; 
+    }
+
+    &--large {
+        margin-right: 5rem;
+        width: 200px;
         
     }
+
     &--hover:hover {
-        background: $white;
-        color: $smoky-black;
+       border-color: $light-gray;
     }
 
-    &--focus:focus {
-        background: $white;
-        box-shadow: 0 0 0 0.25rem $smoky-black;
+    &--active:active {
+        border-color: $light-gray;
+        color: $light-gray;
     }
 }
 
 @media (max-whith: $breakpoint-lg) {
-    .post__button--small {
-        margin-right: 0.25rem;
+    .content__button--large {
+        margin-right: 4rem;
     }
 }
