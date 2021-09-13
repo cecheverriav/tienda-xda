@@ -14,6 +14,33 @@
 </head>
 
 <body>
+    <section class="nav-bar">
+        <div class="nav-container">
+            <div class="brand">
+                <a href="/">
+                    XDA
+                </a>
+            </div>
+            <nav>
+                <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                <ul class="nav-list">
+                    <li>
+                        <a href="#">mujer</a>
+                    </li>
+                    <li>
+                        <a href="#">hombre</a>
+                    </li>
+                    <li>
+                        <a href="#">accesorios</a>
+                    </li>
+                    <li>
+                        <a href="#">blog</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
     <main>
         <section class="header"></section>
         <section class="content">
@@ -25,7 +52,8 @@
             </div>
             <div class="content__button-container">
                 <button type="button"
-                    class="content__button content__button--hover content__button--active content__button--large">Ir a tienda</button>
+                    class="content__button content__button--hover content__button--active content__button--large">Ir a
+                    tienda</button>
             </div>
             <footer class="content__newsletter">
                 <form class="content__form">
@@ -37,6 +65,22 @@
             </footer>
         </section>
     </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+        (function ($) {
+            $(function () {
+                $('#nav-toggle').click(function () {
+                    $('nav ul').slideToggle();
+                });
+                $('#nav-toggle').on('click', function () {
+                    this.classList.toggle('active');
+                });
+            });
+        })(jQuery);
+    </script>
 </body>
 
 </html>
